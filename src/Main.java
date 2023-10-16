@@ -1,4 +1,3 @@
-import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 //prime numbers
@@ -59,13 +58,14 @@ public class Main {
                     System.out.println(nr[i]);
         }
         else{
-            for (int i = 0; i < args.length; i++) {
+            for (String arg : args) {
                 try {
-                    int x = Integer.parseInt(args[i]);
+                    int x = Integer.parseInt(arg);
                     if (prim(x))
-                        System.out.println(args[i]);
+                        System.out.println(arg);
+                } catch (Exception e) {
+
                 }
-                catch(Exception e){}
             }
         }
 
